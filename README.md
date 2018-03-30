@@ -15,7 +15,7 @@ git update-ref -d HEAD
 ```
 git reset --soft HEAD~n
 ``` 
-4. see the number of commits on all branches by all authors
+4. print the number of commits on all branches grouped by authors
 
 ```
 git shortlog -s -n --all
@@ -34,4 +34,34 @@ git remote -v
 7. change the author date when committing changes
 ```
 git commit --date "date-format" -m "commit message"
+```
+
+8. Show the list of branches
+```
+git show-branch
+```
+
+9. Show the list of tags on the current branch
+```
+git tag
+```
+10. Show all the configurations for the current repository
+
+```
+git config -l
+```
+
+11. remove a file from the staging area
+
+```
+git reset <file_name>
+```
+
+12. remove all files of a folder from the staging area
+```
+git reset <folder_name>/
+```
+13. see the changes in the files added to the staging area
+```
+git diff --staged
 ```
