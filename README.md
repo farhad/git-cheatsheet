@@ -65,3 +65,22 @@ git reset <folder_name>/
 ```
 git diff --staged
 ```
+14. change the url of remote repository
+```
+git remote set-url <remote_name> <url>
+```
+
+15. ignore changes to already tracked files
+```
+git update-index --assume-unchanged <file>
+```
+
+16. ignore changes to already tracked files in a folder
+```
+git update-index --assume-unchanged <folder_name>/
+```
+17. undo tip 15 & 16 : start tracking files again
+
+```
+git update-index --no-assume-unchanged [<file> ...]
+```
