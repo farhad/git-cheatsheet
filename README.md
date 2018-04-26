@@ -88,3 +88,11 @@ git update-index --no-assume-unchanged [<file> ...]
 ```
 git tag --sort=-creatordate
 ```
+19. delete tag from the local repository
+```
+git tag --delete tagname
+```
+20. delete tag from the remote repository
+```
+git push --delete origin tagname 
+```
