@@ -84,3 +84,7 @@ git update-index --assume-unchanged <folder_name>/
 ```
 git update-index --no-assume-unchanged [<file> ...]
 ```
+18. show list of tags, sorted by date descendingly
+```
+git tag --sort=-creatordate
+```
