@@ -75,6 +75,12 @@ git remote set-url <remote_name> <url>
 git update-index --assume-unchanged <file>
 ```
 
+another alternative :
+```
+git update-index --skip-worktree <file> 
+```
+[ more information on difference between assume-unchanged and skip-worktree.](https://stackoverflow.com/a/13631525/2450855)
+
 16. ignore changes to already tracked files in a folder
 ```
 git update-index --assume-unchanged <folder_name>/
