@@ -102,3 +102,22 @@ git tag --delete tagname
 ```
 git push --delete origin tagname 
 ```
+21. clone all branches in a remote repository
+
+First, clone the remote repository :
+```
+git clone "remote repository url"
+```
+Then, see what branches exist in this repository
+```
+git branch -a
+```
+
+If you just want to take a quick peek at an upstream branch :
+```
+git checkout origing/branch_name
+```
+Finally, if you want to continue developing on that branch, you should
+```
+git checkout -b branch_name
+```
