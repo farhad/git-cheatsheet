@@ -121,3 +121,7 @@ Finally, if you want to continue developing on that branch, you should
 ```
 git checkout -b branch_name
 ```
+22. see which commit a tag points to
+```
+git rev-parse tagname
+```
