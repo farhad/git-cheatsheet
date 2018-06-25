@@ -130,7 +130,7 @@ git rev-parse tagname
 git reset --hard tagname
 ```
 
-24. revert branch history to a specific, keeping all changes after the tag in the staging area
+24. revert branch history to a specific tag, keeping all changes after the tag in the staging area
 ```
 git reset --soft tagname
 ```
