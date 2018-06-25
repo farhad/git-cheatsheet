@@ -125,3 +125,12 @@ git checkout -b branch_name
 ```
 git rev-parse tagname
 ```
+23. revert branch history to a specific tag, discarding all changes after the tag
+```
+git reset --hard tagname
+```
+
+24. revert branch history to a specific, keeping all changes after the tag in the staging area
+```
+git reset --soft tagname
+```
