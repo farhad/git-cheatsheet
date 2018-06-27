@@ -115,7 +115,7 @@ git branch -a
 
 If you just want to take a quick peek at an upstream branch :
 ```
-git checkout origing/branch_name
+git checkout origin/branch_name
 ```
 Finally, if you want to continue developing on that branch, you should
 ```
@@ -133,4 +133,38 @@ git reset --hard tagname
 24. revert branch history to a specific tag, keeping all changes after the tag in the staging area
 ```
 git reset --soft tagname
+```
+25. Show both the `AUTHOR_DATE` and `COMMITTER_DATE` of commits 
+```
+git log --format=fuller
+``` 
+26. ##### The difference between `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE` :
+
+There are two kinds of timestamp in git: a `GIT_AUTHOR_DATE` and a `GIT_COMMITTER_DATE`. Although in most cases they both store the same value, they serve slightly different purposes. As the documentation depicts :   
+```
+The author is the person who originally wrote the work, whereas the committer is the person who last applied the work.
+```
+So if, for instance, you send in a patch to a project, the author date will be when you made the original commit but the committer date will be when the patch was applied. Another common scenario is rebasing: rebasing will alter the commit date, but not the author date.
+
+27. changing the `AUTHOR_DATE` and `COMMITTER_DATE` of a commit in git
+```
+$ export GIT_AUTHOR_DATE="Wed Feb 16 14:00 2037 +0100"
+$ export GIT_COMMITTER_DATE="Wed Feb 16 14:00 2037 +0100"
+$ git commit ...
+```
+28. filtering history of commits in date ranges using `since` and `until` options
+
+```
+git log --since='yesterday'
+```
+```
+git log --since="1 week ago" --until="yesterday"
+```
+29. showing commit history with summary of changes made in each commit
+```
+git whatchanged 
+```
+also, the `since` and `until` options can be used to filter history
+```
+git whatchanged --since='2 weeks ago' --until=`2 days ago`
 ```
