@@ -179,3 +179,7 @@ to remove a remote branch
 ```
 git push --delete remote_name branch_name
 ```
+31. see the changes to a file in a commit
+```
+git show commit_hash -- file_name
+```
