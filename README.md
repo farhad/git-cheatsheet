@@ -168,3 +168,14 @@ also, the `since` and `until` options can be used to filter history
 ```
 git whatchanged --since='2 weeks ago' --until=`2 days ago`
 ```
+30. delete local and remote branches
+
+to remove local branch 
+```
+git branch -D branch_name
+```
+to remove a remote branch
+
+```
+git push --delete remote_name branch_name
+```
