@@ -183,3 +183,20 @@ git push --delete remote_name branch_name
 ```
 git show commit_hash -- file_name
 ```
+32. close/archive a branch
+
+First, tag the tip of the branch by archiving it, and then delete the branch.
+```
+git tag archive/<branchname> <branchname>
+git branch -d <branchname>
+git checkout master
+```
+The branch is now deleted and can be retrieved later by checking out the tag and recreating it.
+```
+git checkout archive/<branchname>
+git checkout -b new_branch_name
+```
+or alternatively :
+```bash
+git checkout -b new_branch_name archive/<branchname>
+```
