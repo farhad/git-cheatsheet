@@ -225,6 +225,7 @@ Finally, reset the upstream branch for the new-name local branch. Switch to the 
 git push origin -u new-name
 ```
 34. revert/undo the last rebase
+
 Rebase leaves the old state as `ORIG_HEAD`, so we can revert the last rebase by running:
 
 ```
