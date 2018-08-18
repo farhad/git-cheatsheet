@@ -231,3 +231,33 @@ Rebase leaves the old state as `ORIG_HEAD`, so we can revert the last rebase by 
 ```
 git reset --hard ORIG_HEAD
 ```
+
+35. move commits from one branch to another
+
+suppose you have made a single legitimate commit on a wrong branch and now you want to move the changes to the correct one.
+
+First, on the wrong branch, reset the changes you've committed :
+
+```
+git reset --soft HEAD~1
+```
+
+Now the changes are back in the staging area. Stash them :
+
+```
+git stash
+```
+
+Then, checkout into the correct branch
+
+```
+git checkout correct_branch_name
+```
+
+And just pop the stashed files
+
+```
+git stash pop
+```
+
+Now if you do a `git status`, you'll see the changes are in the staging area of the correct branch and ready to be committed.
