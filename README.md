@@ -261,3 +261,9 @@ git stash pop
 ```
 
 Now if you do a `git status`, you'll see the changes are in the staging area of the correct branch and ready to be committed.
+
+##### 36. show all branches(remote and local) that contain a specific tag
+
+```
+git branch -a --contains tag_name
+```
