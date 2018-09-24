@@ -267,3 +267,9 @@ Now if you do a `git status`, you'll see the changes are in the staging area of 
 ```
 git branch -a --contains tag_name
 ```
+
+##### 37. update the local list of remote branches
+
+```
+git update remote origin --prune
+```
