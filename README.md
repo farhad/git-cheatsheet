@@ -281,3 +281,9 @@ git stash pop = git stash apply && git stash drop.
 `git stash pop` throws away the (topmost, by default) stash after applying it, whereas `git stash apply` leaves it in the stash list for possible later reuse (or you can then git stash drop it).
 
 This happens unless there are conflicts after git stash pop, in this case, it will not remove the stash, behaving exactly like git stash apply.
+
+##### 39. Show commit history with tags and branch names
+
+```
+git log --decorate
+```
