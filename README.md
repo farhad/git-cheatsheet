@@ -287,3 +287,9 @@ This happens unless there are conflicts after git stash pop, in this case, it wi
 ```
 git log --decorate
 ```
+
+##### 40. Checkout a remote branch in a newly-cloned repository
+
+```
+git checkout -b [branch_name] origin/[branch_name]
+```
