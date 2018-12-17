@@ -293,3 +293,9 @@ git log --decorate
 ```
 git checkout -b [branch_name] origin/[branch_name]
 ```
+
+##### 41. Rebasing feature branch with master
+Assuming you are on your working branch and you are the only one working on it.
+```
+git fetch && git rebase origin/master
+```
