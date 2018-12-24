@@ -299,3 +299,17 @@ Assuming you are on your working branch and you are the only one working on it.
 ```
 git fetch && git rebase origin/master
 ```
+
+##### 42.Show history of commits made on branch
+
+To summarize the log output to commits that are made on a specific branch, first checkout the desired branch
+
+```
+git checkout [branch_name]
+```
+Then,
+
+```
+git log --graph --decorate --pretty=oneline --abbrev-commit --first-parent
+
+```
