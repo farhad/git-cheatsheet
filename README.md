@@ -274,7 +274,7 @@ git branch -a --contains tag_name
 git update remote origin --prune
 ```
 
-##### 38. Difference between `git stash pop` and `git statsh apply`
+##### 38. difference between `git stash pop` and `git statsh apply`
 ```
 git stash pop = git stash apply && git stash drop.
 ```
@@ -282,25 +282,25 @@ git stash pop = git stash apply && git stash drop.
 
 This happens unless there are conflicts after git stash pop, in this case, it will not remove the stash, behaving exactly like git stash apply.
 
-##### 39. Show commit history with tags and branch names
+##### 39. show commit history with tags and branch names
 
 ```
 git log --decorate
 ```
 
-##### 40. Checkout a remote branch in a newly-cloned repository
+##### 40. checkout a remote branch in a newly-cloned repository
 
 ```
 git checkout -b [branch_name] origin/[branch_name]
 ```
 
-##### 41. Rebasing feature branch with master
+##### 41. rebasing feature branch with master
 Assuming you are on your working branch and you are the only one working on it.
 ```
 git fetch && git rebase origin/master
 ```
 
-##### 42.Show history of commits made on branch
+##### 42. show history of commits made on branch
 
 To summarize the log output to commits that are made on a specific branch, first checkout the desired branch
 
@@ -312,4 +312,15 @@ Then,
 ```
 git log --graph --decorate --pretty=oneline --abbrev-commit --first-parent
 
+```
+##### 43. remove all staged changes
+
+```
+git checkout -- .
+```
+
+##### 44. remove staged changes of a file
+
+```
+git checkout -- [filename]
 ```
